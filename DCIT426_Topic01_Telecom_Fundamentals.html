@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>DCIT 426 Telecommunications</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">DCIT 426 Telecommunications</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#dcit-426-telecommunications"
+id="toc-dcit-426-telecommunications">DCIT 426 Telecommunications</a>
+<ul>
+<li><a href="#topic-1-course-introduction-and-telecom-fundamentals"
+id="toc-topic-1-course-introduction-and-telecom-fundamentals">Topic 1:
+Course Introduction and Telecom Fundamentals</a>
+<ul>
+<li><a href="#textbook-mapping" id="toc-textbook-mapping">Textbook
+Mapping</a></li>
+</ul></li>
+<li><a href="#what-telecommunication-actually-means"
+id="toc-what-telecommunication-actually-means">1.1 What
+“telecommunication” actually means</a>
+<ul>
+<li><a href="#the-five-block-model-of-any-telecom-system"
+id="toc-the-five-block-model-of-any-telecom-system">The five-block model
+of any telecom system</a></li>
+</ul></li>
+<li><a href="#evolution-of-telecommunications"
+id="toc-evolution-of-telecommunications">1.2 Evolution of
+telecommunications</a>
+<ul>
+<li><a href="#global-timeline" id="toc-global-timeline">Global
+timeline</a></li>
+<li><a
+href="#ghana-timeline-very-likely-to-appear-in-a-local-context-question"
+id="toc-ghana-timeline-very-likely-to-appear-in-a-local-context-question">Ghana
+timeline (very likely to appear in a “local context” question)</a></li>
+</ul></li>
+<li><a href="#signals" id="toc-signals">1.3 Signals</a>
+<ul>
+<li><a href="#analog-vs-digital-signals"
+id="toc-analog-vs-digital-signals">Analog vs digital signals</a></li>
+<li><a href="#the-sine-wave-and-its-three-parameters"
+id="toc-the-sine-wave-and-its-three-parameters">The sine wave and its
+three parameters</a></li>
+<li><a href="#time-domain-vs-frequency-domain"
+id="toc-time-domain-vs-frequency-domain">Time domain vs frequency
+domain</a></li>
+</ul></li>
+<li><a href="#bandwidth" id="toc-bandwidth">1.4 Bandwidth</a>
+<ul>
+<li><a href="#worked-example-the-telephone-voice-channel"
+id="toc-worked-example-the-telephone-voice-channel">Worked example: the
+telephone voice channel</a></li>
+<li><a href="#baseband-vs-broadband"
+id="toc-baseband-vs-broadband">Baseband vs broadband</a></li>
+</ul></li>
+<li><a href="#channels" id="toc-channels">1.5 Channels</a>
+<ul>
+<li><a href="#guided-vs-unguided" id="toc-guided-vs-unguided">Guided vs
+unguided</a></li>
+<li><a href="#transmission-modes-simplex-half-duplex-full-duplex"
+id="toc-transmission-modes-simplex-half-duplex-full-duplex">Transmission
+modes: simplex, half-duplex, full-duplex</a></li>
+<li><a href="#what-the-channel-does-to-your-signal"
+id="toc-what-the-channel-does-to-your-signal">What the channel does to
+your signal</a></li>
+</ul></li>
+<li><a href="#analog-vs-digital-transmission-and-why-digital-won"
+id="toc-analog-vs-digital-transmission-and-why-digital-won">1.6 Analog
+vs digital transmission, and why digital won</a>
+<ul>
+<li><a href="#the-key-mechanism-repeaters-vs-amplifiers"
+id="toc-the-key-mechanism-repeaters-vs-amplifiers">The key mechanism:
+repeaters vs amplifiers</a></li>
+<li><a href="#full-advantages-of-digital-transmission"
+id="toc-full-advantages-of-digital-transmission">Full advantages of
+digital transmission</a></li>
+<li><a href="#disadvantages-of-digital"
+id="toc-disadvantages-of-digital">Disadvantages of digital</a></li>
+</ul></li>
+<li><a href="#standards-and-standards-bodies"
+id="toc-standards-and-standards-bodies">1.7 Standards and standards
+bodies</a>
+<ul>
+<li><a href="#why-standards-exist" id="toc-why-standards-exist">Why
+standards exist</a></li>
+<li><a href="#de-jure-vs-de-facto" id="toc-de-jure-vs-de-facto">De jure
+vs de facto</a></li>
+<li><a href="#the-bodies-you-must-know"
+id="toc-the-bodies-you-must-know">The bodies you must know</a></li>
+<li><a href="#the-three-itu-sectors-frequently-asked"
+id="toc-the-three-itu-sectors-frequently-asked">The three ITU sectors
+(frequently asked)</a></li>
+</ul></li>
+<li><a href="#formula-sheet-for-topic-1"
+id="toc-formula-sheet-for-topic-1">1.8 Formula sheet for Topic
+1</a></li>
+<li><a href="#traps-that-cost-marks" id="toc-traps-that-cost-marks">1.9
+Traps that cost marks</a></li>
+<li><a href="#glossary" id="toc-glossary">1.10 Glossary</a></li>
+</ul></li>
+<li><a href="#objective-questions-topic-1"
+id="toc-objective-questions-topic-1">Objective questions (Topic 1)</a>
+<ul>
+<li><a href="#answers-with-explanations"
+id="toc-answers-with-explanations">Answers with explanations</a></li>
+</ul></li>
+<li><a href="#exam-style-written-questions-with-model-answers"
+id="toc-exam-style-written-questions-with-model-answers">Exam-style
+written questions with model answers</a>
+<ul>
+<li><a href="#what-to-do-before-moving-on"
+id="toc-what-to-do-before-moving-on">What to do before moving
+on</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="dcit-426-telecommunications">DCIT 426 Telecommunications</h1>
+<h2 id="topic-1-course-introduction-and-telecom-fundamentals">Topic 1:
+Course Introduction and Telecom Fundamentals</h2>
+<p><strong>Syllabus line (Week 1):</strong> <em>Evolution of
+telecommunications; signals, bandwidth, channels; analog vs digital;
+standards bodies (ITU, IEEE, IETF).</em></p>
+<h3 id="textbook-mapping">Textbook Mapping</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Sub-topic</th>
+<th style="text-align: left;">Where to Read</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">System model, standards</td>
+<td style="text-align: left;">Foruzan Ch. 1; Stallings Ch. 1 and Ch.
+2</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Signals, bandwidth, time/frequency
+domain</td>
+<td style="text-align: left;">Foruzan Ch. 3; Stallings Ch. 3</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Analog vs digital transmission</td>
+<td style="text-align: left;">Stallings Ch. 3, Section 3.2</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">History and evolution</td>
+<td style="text-align: left;">Haykin &amp; Moher Ch. 1</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="what-telecommunication-actually-means">1.1 What
+“telecommunication” actually means</h2>
+<p><strong>Short answer:</strong> communication over a distance, using
+electrical, electromagnetic or optical signals, where the message is
+carried by an artificial system rather than by your own voice.</p>
+<p>The word breaks into two parts: - <em>tele</em> (Greek): far, at a
+distance - <em>communicare</em> (Latin): to share</p>
+<p>So a person shouting across a room is communication. That same person
+calling from Legon to Kumasi is <strong>telecommunication</strong>,
+because a system had to convert the voice into a signal, carry it, and
+rebuild it at the other end.</p>
+<h3 id="the-five-block-model-of-any-telecom-system">The five-block model
+of any telecom system</h3>
+<p>Every telecom system you will study this semester, from a telegraph
+in 1840 to a 5G base station in Achimota, fits this same picture.
+Memorise this diagram. Examiners love it.</p>
+<pre><code>  +--------+     +-------------+      +-----------+      +----------+     +-------------+
+  | SOURCE | --&gt; | TRANSMITTER | ---&gt; |  CHANNEL  | ---&gt; | RECEIVER | --&gt; | DESTINATION |
+  +--------+     +-------------+      +-----------+      +----------+     +-------------+
+   message         converts the         the medium        undoes what        the person
+   (voice,         message into a       (copper, air,      the transmitter    or device
+   text, video)    signal suited to     fibre, space)      did                that uses
+                   the channel               ^                                the message
+                                             |
+                                        +---------+
+                                        |  NOISE  |  &lt;-- always present, never invited
+                                        +---------+</code></pre>
+<p><strong>Worked example (map the blocks yourself):</strong> you send a
+WhatsApp voice note from Madina to a friend in Tamale.</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Block</th>
+<th style="text-align: left;">What plays that role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Source</td>
+<td style="text-align: left;">Your voice, plus the phone microphone</td>
+</tr>
+<tr>
+<td style="text-align: left;">Transmitter</td>
+<td style="text-align: left;">Phone codec + modulator + antenna (turns
+bits into a radio wave)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Channel</td>
+<td style="text-align: left;">Air to the MTN cell tower, then fibre
+backbone up north</td>
+</tr>
+<tr>
+<td style="text-align: left;">Noise</td>
+<td style="text-align: left;">Other phones on the same band, thermal
+noise in the amplifiers, rain fade</td>
+</tr>
+<tr>
+<td style="text-align: left;">Receiver</td>
+<td style="text-align: left;">Your friend’s antenna, demodulator,
+decoder</td>
+</tr>
+<tr>
+<td style="text-align: left;">Destination</td>
+<td style="text-align: left;">Their earpiece, and their brain</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Exam tip:</strong> when a question says “with the aid of a
+diagram, describe a general communication system,” this five-block
+diagram plus one sentence per block is the full-mark answer. Always draw
+noise entering at the channel, not at the source.</p>
+</blockquote>
+<hr />
+<h2 id="evolution-of-telecommunications">1.2 Evolution of
+telecommunications</h2>
+<p>You do not need every date. You need the <strong>pattern</strong>:
+each generation solved the bottleneck of the previous one.</p>
+<h3 id="global-timeline">Global timeline</h3>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 32%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Era</th>
+<th style="text-align: left;">Milestone</th>
+<th style="text-align: left;">Bottleneck it solved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1837</td>
+<td style="text-align: left;">Telegraph (Morse). Dots and dashes over a
+wire.</td>
+<td style="text-align: left;">Distance. First time a message moved
+faster than a horse.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1876</td>
+<td style="text-align: left;">Telephone (Bell). Continuous voice over a
+wire.</td>
+<td style="text-align: left;">Telegraph needed trained operators and
+coded text.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1895</td>
+<td style="text-align: left;">Radio (Marconi). Wireless telegraphy.</td>
+<td style="text-align: left;">Wires cannot cross oceans cheaply or reach
+ships.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1948</td>
+<td style="text-align: left;">Shannon publishes information theory;
+transistor invented.</td>
+<td style="text-align: left;">No one knew the theoretical limit of a
+channel.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1950s to 60s</td>
+<td style="text-align: left;">Microwave relay, coaxial cable, satellite
+(Telstar, 1962).</td>
+<td style="text-align: left;">Capacity for long-haul trunk routes.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1970s</td>
+<td style="text-align: left;">Optical fibre becomes practical (Corning
+low-loss glass); digital switching.</td>
+<td style="text-align: left;">Copper capacity and noise
+accumulation.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1980s to 90s</td>
+<td style="text-align: left;">1G analog cellular, then 2G GSM digital.
+Internet and TCP/IP spread.</td>
+<td style="text-align: left;">Mobility, and incompatible networks.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2000s</td>
+<td style="text-align: left;">3G data, broadband DSL, submarine fibre
+reaches West Africa.</td>
+<td style="text-align: left;">Data, not just voice.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2010s to now</td>
+<td style="text-align: left;">4G LTE, 5G NR, LEO satellite
+constellations, everything is IP.</td>
+<td style="text-align: left;">Latency, density, and capacity per square
+kilometre.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The one sentence that ties it together:</strong>
+telecommunications has moved from <em>analog to digital</em>, from
+<em>fixed to mobile</em>, from <em>voice-centric to data-centric</em>,
+and from <em>separate networks per service to one converged IP
+network</em>.</p>
+<h3
+id="ghana-timeline-very-likely-to-appear-in-a-local-context-question">Ghana
+timeline (very likely to appear in a “local context” question)</h3>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Year</th>
+<th style="text-align: left;">Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1881</td>
+<td style="text-align: left;">First telegraph lines under colonial
+administration, mainly Cape Coast and Accra</td>
+</tr>
+<tr>
+<td style="text-align: left;">Post-1957</td>
+<td style="text-align: left;">Posts and Telecommunications (P&amp;T)
+runs everything as a state monopoly</td>
+</tr>
+<tr>
+<td style="text-align: left;">1994 to 1995</td>
+<td style="text-align: left;">Sector reform. Ghana Telecom is separated
+out. Mobile licences issued.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1996</td>
+<td style="text-align: left;">Ghana becomes one of the first African
+countries with commercial mobile and full internet connectivity</td>
+</tr>
+<tr>
+<td style="text-align: left;">2001</td>
+<td style="text-align: left;">SAT-3/WASC submarine cable lands at Accra,
+replacing satellite-only international links</td>
+</tr>
+<tr>
+<td style="text-align: left;">2008</td>
+<td style="text-align: left;">Vodafone acquires 70% of Ghana
+Telecom</td>
+</tr>
+<tr>
+<td style="text-align: left;">2010 to 2012</td>
+<td style="text-align: left;">MainOne, Glo-1 and ACE submarine cables
+land, prices per Mbps collapse</td>
+</tr>
+<tr>
+<td style="text-align: left;">2021</td>
+<td style="text-align: left;">Government acquires AirtelTigo, later
+rebranded <strong>AT Ghana</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">2023 to 2024</td>
+<td style="text-align: left;">Telecel Group acquires Vodafone Ghana,
+rebranded <strong>Telecel Ghana</strong> in March 2024</td>
+</tr>
+<tr>
+<td style="text-align: left;">2024 to 2026</td>
+<td style="text-align: left;">5G introduced through a shared wholesale
+model (Next Gen InfraCo). The NCA later removed NGIC’s exclusivity and,
+in July 2026, opened a competitive request for applications for spectrum
+in the 700 MHz, 2.3 GHz and 3 GHz bands.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ghana today:</strong> three mobile network operators (MTN,
+Telecel, AT), with MTN designated by the NCA as having
+<strong>Significant Market Power</strong>, which means it faces stricter
+price and interconnection rules than the others. Most subscribers are
+still on 3G and 4G, not 5G.</p>
+<blockquote>
+<p><strong>Why the lecturer cares:</strong> this is the raw material for
+exam questions like “Discuss how liberalisation of the telecom sector
+affected service delivery in Ghana” or “Explain why submarine cable
+landings reduced internet cost in Ghana.” Learn the causal story, not
+just the dates.</p>
+</blockquote>
+<hr />
+<h2 id="signals">1.3 Signals</h2>
+<p><strong>Short answer:</strong> a signal is a physical quantity
+(usually voltage, current, or light intensity) that varies with time and
+carries information.</p>
+<h3 id="analog-vs-digital-signals">Analog vs digital signals</h3>
+<pre><code>ANALOG SIGNAL                          DIGITAL SIGNAL
+(infinitely many values)               (finite set of values, here 2)
+
+  amplitude                              amplitude
+     ^      __                              ^   ___     ___
+     |    /    \      __                    |  |   |   |   |
+     |  /       \   /   \                   |  |   |   |   |
+     |_/         \_/     \___               |__|   |___|   |____
+     +----------------------&gt; t             +--------------------&gt; t
+     smooth, continuous                     abrupt, discrete steps
+     e.g. human voice on a landline         e.g. 1 0 1 1 0 on a LAN cable</code></pre>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 32%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: left;">Analog</th>
+<th style="text-align: left;">Digital</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Values</td>
+<td style="text-align: left;">Continuous, infinite</td>
+<td style="text-align: left;">Discrete, finite (usually 0 and 1)</td>
+</tr>
+<tr>
+<td>Example</td>
+<td style="text-align: left;">Human speech, FM radio wave, old
+vinyl</td>
+<td style="text-align: left;">Computer data, CD audio, Ethernet</td>
+</tr>
+<tr>
+<td>Noise</td>
+<td style="text-align: left;">Noise blends into the signal and cannot be
+removed</td>
+<td style="text-align: left;">Noise can be rejected as long as 0 and 1
+are still distinguishable</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Do not confuse two different pairs.</strong> This is the
+single most common mix-up in this course. 1. <strong>Analog vs digital
+<em>data</em></strong> (the information itself: voice is analog data, a
+text file is digital data) 2. <strong>Analog vs digital
+<em>signal</em></strong> (how it is physically represented on the
+medium)</p>
+<p>All four combinations exist:</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 32%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Data</th>
+<th style="text-align: left;">Signal</th>
+<th style="text-align: left;">Real example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Analog data</td>
+<td style="text-align: left;">Analog signal</td>
+<td style="text-align: left;">FM radio broadcast</td>
+</tr>
+<tr>
+<td style="text-align: left;">Analog data</td>
+<td style="text-align: left;">Digital signal</td>
+<td style="text-align: left;">Your voice on a mobile phone (codec
+digitises it)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Digital data</td>
+<td style="text-align: left;">Analog signal</td>
+<td style="text-align: left;">Old dial-up modem, or Wi-Fi (bits ride on
+a radio carrier)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Digital data</td>
+<td style="text-align: left;">Digital signal</td>
+<td style="text-align: left;">Ethernet cable in the lab</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-sine-wave-and-its-three-parameters">The sine wave and its
+three parameters</h3>
+<p>The sine wave is the atom of signal theory. Everything else is built
+from sine waves.</p>
+<p><code>s(t) = A sin(2πft + φ)</code></p>
+<pre><code>        A |     ___                       Peak amplitude A = height
+          |   /     \                     Frequency f     = cycles per second (Hz)
+        0 |--/-------\-------/----&gt;  t    Phase φ         = starting position
+          | /         \     /
+       -A |/           \___/
+          |&lt;--- T ---&gt;|                   Period T = time for one cycle</code></pre>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 24%" />
+<col style="width: 24%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Meaning</th>
+<th style="text-align: left;">Unit</th>
+<th style="text-align: left;">Change it and…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Amplitude (A)</td>
+<td style="text-align: left;">Strength or height of the signal</td>
+<td style="text-align: left;">volts</td>
+<td style="text-align: left;">the sound gets louder</td>
+</tr>
+<tr>
+<td style="text-align: left;">Frequency (f)</td>
+<td style="text-align: left;">How many cycles per second</td>
+<td style="text-align: left;">hertz (Hz)</td>
+<td style="text-align: left;">the pitch gets higher</td>
+</tr>
+<tr>
+<td style="text-align: left;">Phase (φ)</td>
+<td style="text-align: left;">Where in the cycle it starts</td>
+<td style="text-align: left;">degrees or radians</td>
+<td style="text-align: left;">it shifts left or right in time</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Two formulas you must know cold:</strong></p>
+<pre><code>T = 1 / f            period and frequency are reciprocals
+λ = c / f            wavelength, where c = 3 x 10^8 m/s in free space</code></pre>
+<p><strong>Quick numeric check.</strong> A signal has f = 1 kHz. - T =
+1/1000 = 1 ms - λ = (3 x 10^8) / 1000 = 300,000 m. That is why very low
+frequencies need enormous antennas.</p>
+<p>A GSM signal at 900 MHz: λ = (3 x 10^8)/(900 x 10^6) = 0.333 m. A
+practical antenna is a fraction of that, roughly 8 cm. <strong>This is
+the reason higher frequency means smaller antennas</strong>, which is
+why 5G mmWave devices can pack many antennas into one phone.</p>
+<h3 id="time-domain-vs-frequency-domain">Time domain vs frequency
+domain</h3>
+<p>Same signal, two ways of drawing it. This idea underpins Week 2, 4
+and 5, so get it now.</p>
+<pre><code>TIME DOMAIN                             FREQUENCY DOMAIN
+&quot;what the signal looks like&quot;            &quot;what ingredients it is made of&quot;
+
+ amp ^   /\    /\    /\                  amp ^
+     |  /  \  /  \  /  \                     |     |
+     | /    \/    \/    \                    |     |
+     +-------------------&gt; time              +-----+------------&gt; frequency
+                                                  1 kHz
+   a 1 kHz sine wave                        a single line at 1 kHz</code></pre>
+<p>A <strong>composite signal</strong> (any real-world signal, like
+speech) is a sum of many sine waves of different frequencies, amplitudes
+and phases. <strong>Fourier analysis</strong> is the mathematics that
+decomposes it. In the frequency domain a composite signal shows up as
+several lines or a continuous band, called its
+<strong>spectrum</strong>.</p>
+<pre><code> Composite signal made of 1 kHz + 3 kHz + 5 kHz (a square-ish wave)
+
+ FREQUENCY DOMAIN
+   amp ^
+       |  |
+       |  |    |
+       |  |    |    |
+       +--+----+----+-------&gt; f (kHz)
+          1    3    5
+
+   Spectrum = the set of frequencies present
+   Bandwidth = 5 - 1 = 4 kHz</code></pre>
+<blockquote>
+<p><strong>Analogy:</strong> a plate of jollof is the time domain, what
+you actually see and eat. The frequency domain is the recipe list: rice,
+tomato, oil, spice, in specific quantities. Fourier analysis is the chef
+who tastes the dish and writes out the recipe.</p>
+</blockquote>
+<hr />
+<h2 id="bandwidth">1.4 Bandwidth</h2>
+<p><strong>Short answer:</strong> bandwidth is the <em>width of a band
+of frequencies</em>, measured in hertz. It is NOT the same as data rate,
+which is measured in bits per second.</p>
+<p>This distinction is examined nearly every year.</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 24%" />
+<col style="width: 24%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Symbol</th>
+<th style="text-align: left;">Unit</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Bandwidth (analog sense)</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">Hz</td>
+<td style="text-align: left;">highest frequency minus lowest
+frequency</td>
+</tr>
+<tr>
+<td style="text-align: left;">Data rate (digital sense)</td>
+<td style="text-align: left;">C or R</td>
+<td style="text-align: left;">bps</td>
+<td style="text-align: left;">how many bits pass per second</td>
+</tr>
+<tr>
+<td style="text-align: left;">Throughput</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">bps</td>
+<td style="text-align: left;">the data rate actually achieved in
+practice</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formula:</strong> <code>B = f_highest - f_lowest</code></p>
+<h3 id="worked-example-the-telephone-voice-channel">Worked example: the
+telephone voice channel</h3>
+<p>Human speech has energy roughly from 100 Hz to 7 kHz, but
+intelligible speech survives on far less. The telephone system therefore
+passes only <strong>300 Hz to 3400 Hz</strong>.</p>
+<pre><code>   |&lt;------------- 4000 Hz channel slot -------------&gt;|
+   |guard|&lt;---- 3100 Hz usable voice band ----&gt;|guard |
+   0    300                                   3400   4000  Hz</code></pre>
+<ul>
+<li>Signal bandwidth = 3400 - 300 = <strong>3100 Hz</strong></li>
+<li>Allocated channel bandwidth = <strong>4 kHz</strong>, the extra 900
+Hz being <strong>guard bands</strong> to stop neighbouring channels
+bleeding into each other</li>
+</ul>
+<p><strong>Why bandwidth matters:</strong> more bandwidth means more
+room to carry information. Nyquist and Shannon (Week 2) turn this into
+hard numbers, but the intuition is already available to you: a wider
+pipe carries more water per second.</p>
+<blockquote>
+<p><strong>Analogy for the road:</strong> bandwidth is the number of
+lanes on the Accra to Tema motorway. Data rate is how many cars actually
+arrive per minute. More lanes usually means more cars, but not if
+traffic is bad (that is throughput), and never more than the physics
+allows (that is Shannon capacity).</p>
+</blockquote>
+<h3 id="baseband-vs-broadband">Baseband vs broadband</h3>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 32%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: left;">Baseband</th>
+<th style="text-align: left;">Broadband</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Meaning</td>
+<td style="text-align: left;">Signal sent at its original
+frequencies</td>
+<td style="text-align: left;">Signal shifted onto a higher-frequency
+carrier</td>
+</tr>
+<tr>
+<td>Channel usage</td>
+<td style="text-align: left;">Whole medium used for one signal</td>
+<td style="text-align: left;">Medium divided into several frequency
+channels</td>
+</tr>
+<tr>
+<td>Example</td>
+<td style="text-align: left;">Ethernet over UTP</td>
+<td style="text-align: left;">Cable TV, or FM radio, or Wi-Fi</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="channels">1.5 Channels</h2>
+<p><strong>Short answer:</strong> the channel is the path the signal
+travels between transmitter and receiver, together with everything that
+path does to the signal.</p>
+<h3 id="guided-vs-unguided">Guided vs unguided</h3>
+<pre><code>GUIDED (wired)                             UNGUIDED (wireless)
+signal is confined inside a medium         signal spreads through space
+
+ [TX]===[twisted pair]===[RX]                [TX] ))) ))) ))) [RX]
+ [TX]===[coaxial cable]===[RX]                     radio waves,
+ [TX]===[optical fibre]===[RX]                     microwave, infrared</code></pre>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 32%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: left;">Guided</th>
+<th style="text-align: left;">Unguided</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Medium</td>
+<td style="text-align: left;">Copper pair, coax, fibre</td>
+<td style="text-align: left;">Air, vacuum, water</td>
+</tr>
+<tr>
+<td>Direction control</td>
+<td style="text-align: left;">Physical path decides it</td>
+<td style="text-align: left;">Antenna pattern decides it</td>
+</tr>
+<tr>
+<td>Security</td>
+<td style="text-align: left;">Harder to intercept</td>
+<td style="text-align: left;">Easier to intercept</td>
+</tr>
+<tr>
+<td>Mobility</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Full</td>
+</tr>
+<tr>
+<td>Ghana example</td>
+<td style="text-align: left;">ECG poles carrying fibre along the N1</td>
+<td style="text-align: left;">MTN 4G on 800 MHz in Adenta</td>
+</tr>
+</tbody>
+</table>
+<p>Week 3 covers each medium properly. For now just know the
+categories.</p>
+<h3 id="transmission-modes-simplex-half-duplex-full-duplex">Transmission
+modes: simplex, half-duplex, full-duplex</h3>
+<pre><code>SIMPLEX             A ------------------&gt;  B      one direction only
+                    e.g. radio broadcast, keyboard to computer
+
+HALF DUPLEX         A &lt;-----------------&gt; B      both directions,
+                    but only one at a time       e.g. walkie-talkie,
+                                                 &quot;over&quot;
+
+FULL DUPLEX         A ==================&gt; B      both directions
+                    A &lt;================== B      simultaneously
+                                                 e.g. phone call</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Mode</th>
+<th style="text-align: left;">Both directions?</th>
+<th style="text-align: left;">At the same time?</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Simplex</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">TV broadcast, GPS receiver</td>
+</tr>
+<tr>
+<td style="text-align: left;">Half-duplex</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Walkie-talkie, old CSMA/CD Ethernet
+hub</td>
+</tr>
+<tr>
+<td style="text-align: left;">Full-duplex</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Telephone call, modern switched
+Ethernet</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Common exam trap:</strong> a mobile phone call is full-duplex
+even though there is only one antenna. It achieves this using
+<strong>FDD</strong> (separate uplink and downlink frequencies) or
+<strong>TDD</strong> (rapid alternation in time). You will meet both in
+Week 5 and Week 9.</p>
+</blockquote>
+<h3 id="what-the-channel-does-to-your-signal">What the channel does to
+your signal</h3>
+<p>Every channel degrades the signal. The three main effects (detailed
+in Week 2):</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 32%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Impairment</th>
+<th style="text-align: left;">What it does</th>
+<th style="text-align: left;">Everyday sign</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Attenuation</strong></td>
+<td style="text-align: left;">Signal loses strength with distance</td>
+<td style="text-align: left;">Voice gets faint on a long line</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Distortion</strong></td>
+<td style="text-align: left;">Different frequencies travel at different
+speeds, so the shape changes</td>
+<td style="text-align: left;">Muffled or smeared audio</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Noise</strong></td>
+<td style="text-align: left;">Unwanted energy added to the signal</td>
+<td style="text-align: left;">Hiss, crackle, static</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="analog-vs-digital-transmission-and-why-digital-won">1.6 Analog
+vs digital transmission, and why digital won</h2>
+<p>This is a classic essay question. Learn the argument, not just the
+list.</p>
+<h3 id="the-key-mechanism-repeaters-vs-amplifiers">The key mechanism:
+repeaters vs amplifiers</h3>
+<pre><code>ANALOG LINK
+             noise         noise         noise
+               |             |             |
+  [TX]---------v-----[AMP]---v----[AMP]----v----[RX]
+  Signal is amplified. But the amplifier cannot tell signal from
+  noise, so it amplifies BOTH. Noise accumulates and never leaves.
+  After many hops the signal is unusable.
+
+DIGITAL LINK
+             noise         noise         noise
+               |             |             |
+  [TX]---------v---[REGEN]---v---[REGEN]---v----[RX]
+  A regenerative repeater DECIDES whether it sees a 0 or a 1,
+  then transmits a brand new clean pulse. Noise is discarded
+  at every hop. The signal at the far end is as clean as at hop 1.</code></pre>
+<p><strong>That single difference is the heart of why the world went
+digital.</strong> Everything else follows from it.</p>
+<h3 id="full-advantages-of-digital-transmission">Full advantages of
+digital transmission</h3>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Advantage</th>
+<th style="text-align: left;">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Noise immunity</strong></td>
+<td style="text-align: left;">Regeneration removes accumulated noise, as
+shown above</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Error detection and
+correction</strong></td>
+<td style="text-align: left;">You can add parity, checksums, CRC, FEC to
+bits. You cannot do that to an analog waveform. (Week 6)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Encryption</strong></td>
+<td style="text-align: left;">Bits can be scrambled with a key. Analog
+scrambling is weak. (Week 13)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Easy multiplexing</strong></td>
+<td style="text-align: left;">Time-division multiplexing of bit streams
+is simple and cheap. (Week 5)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Integration of
+services</strong></td>
+<td style="text-align: left;">Voice, video, text and data all become
+“just bits,” so one network carries everything. This is
+<em>convergence</em>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cheap hardware</strong></td>
+<td style="text-align: left;">Digital circuits ride the cost curve of
+VLSI and software. Analog circuits do not.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Storage and
+processing</strong></td>
+<td style="text-align: left;">Bits can be buffered, compressed, and
+processed by computers</td>
+</tr>
+</tbody>
+</table>
+<h3 id="disadvantages-of-digital">Disadvantages of digital</h3>
+<ul>
+<li>Digitising analog data needs <strong>more bandwidth</strong>. A 4
+kHz voice channel becomes 64 kbps PCM, which needs far more than 4 kHz
+of raw spectrum unless clever modulation is used.</li>
+<li><strong>Quantisation error</strong> is introduced when converting
+analog to digital, and it can never be undone.</li>
+<li>Requires <strong>synchronisation</strong> between sender and
+receiver, which analog does not.</li>
+</ul>
+<blockquote>
+<p><strong>Scenario to remember:</strong> compare an old analog trunk
+line from Accra to Bolgatanga with today’s fibre link. On the analog
+line each amplifier along the way added hiss, and by Bolga the caller
+sounded like they were in a storm. On the fibre link, every regenerator
+rebuilds clean bits, so the voice at Bolga is bit-for-bit identical to
+the voice at Accra. Distance stops degrading quality.</p>
+</blockquote>
+<hr />
+<h2 id="standards-and-standards-bodies">1.7 Standards and standards
+bodies</h2>
+<h3 id="why-standards-exist">Why standards exist</h3>
+<p><strong>Short answer:</strong> so that equipment from different
+manufacturers in different countries can interoperate.</p>
+<p>Without standards, an MTN SIM would not work on a Telecel tower, a
+Huawei router would not talk to a Cisco switch, and a call from Accra to
+London would stop at the border. Standards give you: -
+<strong>Interoperability</strong> across vendors -
+<strong>Competition</strong>, which lowers prices, because buyers are
+not locked to one vendor - <strong>Economies of scale</strong> in
+manufacturing - <strong>A common technical language</strong> for
+engineers and regulators</p>
+<h3 id="de-jure-vs-de-facto">De jure vs de facto</h3>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 32%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: left;">De jure (“by law”)</th>
+<th style="text-align: left;">De facto (“by fact”)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Origin</td>
+<td style="text-align: left;">Formally approved by a recognised
+body</td>
+<td style="text-align: left;">Became standard through widespread
+adoption</td>
+</tr>
+<tr>
+<td>Example</td>
+<td style="text-align: left;">ITU-T G.711, IEEE 802.11</td>
+<td style="text-align: left;">TCP/IP originally, PDF, HTTP cookies</td>
+</tr>
+<tr>
+<td>Two sub-types of de facto</td>
+<td style="text-align: left;"><em>Proprietary/closed</em> (owned by one
+company, e.g. early Cisco IGRP) and <em>open</em> (published
+freely)</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-bodies-you-must-know">The bodies you must know</h3>
+<table style="width:98%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 22%" />
+<col style="width: 17%" />
+<col style="width: 23%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Body</th>
+<th style="text-align: left;">Full name</th>
+<th style="text-align: left;">Scope</th>
+<th style="text-align: left;">Output is called</th>
+<th style="text-align: left;">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>ITU</strong></td>
+<td style="text-align: left;">International Telecommunication Union</td>
+<td style="text-align: left;">UN agency. Global telecom
+coordination.</td>
+<td style="text-align: left;"><strong>Recommendations</strong></td>
+<td style="text-align: left;">See below</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IEEE</strong></td>
+<td style="text-align: left;">Institute of Electrical and Electronics
+Engineers</td>
+<td style="text-align: left;">LAN, MAN, physical and data-link
+layers</td>
+<td style="text-align: left;"><strong>Standards</strong> (numbered)</td>
+<td style="text-align: left;">802.3 Ethernet, 802.11 Wi-Fi, 802.15
+Bluetooth/Zigbee, 802.16 WiMAX</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IETF</strong></td>
+<td style="text-align: left;">Internet Engineering Task Force</td>
+<td style="text-align: left;">Internet protocols, layer 3 and above</td>
+<td style="text-align: left;"><strong>RFCs</strong> (Request for
+Comments)</td>
+<td style="text-align: left;">RFC 791 IP, RFC 793 TCP, RFC 2616/7230
+HTTP</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ISO</strong></td>
+<td style="text-align: left;">International Organization for
+Standardization</td>
+<td style="text-align: left;">Broad, all industries</td>
+<td style="text-align: left;">ISO standards</td>
+<td style="text-align: left;">ISO/IEC 7498, the <strong>OSI
+model</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3GPP</strong></td>
+<td style="text-align: left;">3rd Generation Partnership Project</td>
+<td style="text-align: left;">Mobile: GSM, UMTS, LTE, 5G NR</td>
+<td style="text-align: left;"><strong>Releases</strong> and TS
+documents</td>
+<td style="text-align: left;">Release 15 = first 5G</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ETSI</strong></td>
+<td style="text-align: left;">European Telecommunications Standards
+Institute</td>
+<td style="text-align: left;">European telecom, founded GSM</td>
+<td style="text-align: left;">ETSI standards</td>
+<td style="text-align: left;">GSM</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ANSI</strong></td>
+<td style="text-align: left;">American National Standards Institute</td>
+<td style="text-align: left;">US national coordination</td>
+<td style="text-align: left;">ANSI standards</td>
+<td style="text-align: left;">ANSI T1</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IANA / ICANN</strong></td>
+<td style="text-align: left;">Internet Assigned Numbers Authority /
+ICANN</td>
+<td style="text-align: left;">IP address and domain name allocation</td>
+<td style="text-align: left;">Registries</td>
+<td style="text-align: left;">.gh domain delegation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NCA</strong></td>
+<td style="text-align: left;">National Communications Authority</td>
+<td style="text-align: left;"><strong>Ghana’s national
+regulator</strong></td>
+<td style="text-align: left;">Licences, directives, type approval</td>
+<td style="text-align: left;">Spectrum licensing, SIM registration,
+quality-of-service standards</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-three-itu-sectors-frequently-asked">The three ITU sectors
+(frequently asked)</h3>
+<pre><code>                          ITU
+                           |
+       +-------------------+-------------------+
+       |                   |                   |
+     ITU-T               ITU-R               ITU-D
+  Telecommunication    Radiocommunication   Development
+  Standardization
+  wireline, protocols,  spectrum allocation,  helping developing
+  codecs, signalling    satellite orbits,     countries build
+  e.g. G.711, H.264,    World Radio           telecom capacity
+  V.90, X.25            Conferences (WRC)</code></pre>
+<p>Memory hook: <strong>T</strong> for <strong>T</strong>elephone and
+<strong>T</strong>echnical standards, <strong>R</strong> for
+<strong>R</strong>adio and spectrum, <strong>D</strong> for
+<strong>D</strong>evelopment.</p>
+<blockquote>
+<p><strong>Ghana connection:</strong> the ITU-R decides globally which
+frequency bands are for mobile. The NCA then decides who in Ghana may
+use those bands, and on what terms. That is exactly why the NCA’s July
+2026 request for applications names the 700 MHz, 2.3 GHz and 3 GHz
+bands. Those band designations came from ITU-R decisions, and the NCA is
+turning them into national licences. This is the layered relationship
+between international standards and national regulation, which is a
+strong point to make in Week 13’s regulation essay.</p>
+</blockquote>
+<hr />
+<h2 id="formula-sheet-for-topic-1">1.8 Formula sheet for Topic 1</h2>
+<pre><code>T = 1/f                     period from frequency
+f = 1/T                     frequency from period
+λ = c/f                     wavelength, c = 3 x 10^8 m/s
+B = f_high - f_low          bandwidth of a composite signal
+dB = 10 log10 (P2/P1)       power gain or loss in decibels</code></pre>
+<p><strong>Decibel worked example.</strong> A signal enters a cable at
+10 mW and leaves at 5 mW.
+<code>dB = 10 log10 (5/10) = 10 x (-0.301) = -3.01 dB</code> A loss of
+about 3 dB means the power halved. Learn this pair: <strong>3 dB =
+double or half the power. 10 dB = ten times.</strong></p>
+<hr />
+<h2 id="traps-that-cost-marks">1.9 Traps that cost marks</h2>
+<ol type="1">
+<li><strong>Bandwidth is in Hz, data rate is in bps.</strong> Never
+write “bandwidth of 10 Mbps” in this exam, even though people say it
+casually.</li>
+<li><strong>Analog data is not the same as an analog signal.</strong>
+Check which one the question asks about.</li>
+<li><strong>Noise enters at the channel</strong>, not at the source.
+Draw it that way.</li>
+<li><strong>Amplifier ≠ repeater.</strong> Amplifiers boost signal and
+noise together. Regenerative repeaters rebuild clean digital
+pulses.</li>
+<li><strong>ITU-T vs ITU-R.</strong> Anything about spectrum or
+satellite orbits is ITU-R. Anything about codecs, protocols or wireline
+is ITU-T.</li>
+<li><strong>IEEE handles layers 1 and 2. IETF handles layer 3
+upward.</strong> Wi-Fi is IEEE. IP is IETF.</li>
+<li><strong>Full-duplex does not require two cables.</strong> It
+requires two separated channels, which can be by frequency or by
+time.</li>
+</ol>
+<hr />
+<h2 id="glossary">1.10 Glossary</h2>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Definition in one line</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Signal</td>
+<td style="text-align: left;">A physical quantity varying with time that
+carries information</td>
+</tr>
+<tr>
+<td style="text-align: left;">Amplitude</td>
+<td style="text-align: left;">The strength or height of a signal</td>
+</tr>
+<tr>
+<td style="text-align: left;">Frequency</td>
+<td style="text-align: left;">Cycles per second, measured in hertz</td>
+</tr>
+<tr>
+<td style="text-align: left;">Period</td>
+<td style="text-align: left;">Time for one complete cycle, the
+reciprocal of frequency</td>
+</tr>
+<tr>
+<td style="text-align: left;">Phase</td>
+<td style="text-align: left;">The position of the waveform relative to
+time zero</td>
+</tr>
+<tr>
+<td style="text-align: left;">Spectrum</td>
+<td style="text-align: left;">The set of frequencies contained in a
+signal</td>
+</tr>
+<tr>
+<td style="text-align: left;">Bandwidth</td>
+<td style="text-align: left;">The width of that set, in hertz</td>
+</tr>
+<tr>
+<td style="text-align: left;">Data rate</td>
+<td style="text-align: left;">Bits transferred per second</td>
+</tr>
+<tr>
+<td style="text-align: left;">Throughput</td>
+<td style="text-align: left;">The data rate actually achieved</td>
+</tr>
+<tr>
+<td style="text-align: left;">Channel</td>
+<td style="text-align: left;">The path plus medium between transmitter
+and receiver</td>
+</tr>
+<tr>
+<td style="text-align: left;">Guided medium</td>
+<td style="text-align: left;">A medium that physically confines the
+signal, such as fibre</td>
+</tr>
+<tr>
+<td style="text-align: left;">Unguided medium</td>
+<td style="text-align: left;">Free space propagation, such as radio</td>
+</tr>
+<tr>
+<td style="text-align: left;">Attenuation</td>
+<td style="text-align: left;">Loss of signal strength over distance</td>
+</tr>
+<tr>
+<td style="text-align: left;">Distortion</td>
+<td style="text-align: left;">Change in signal shape caused by
+frequency-dependent delay</td>
+</tr>
+<tr>
+<td style="text-align: left;">Noise</td>
+<td style="text-align: left;">Unwanted energy added to a signal</td>
+</tr>
+<tr>
+<td style="text-align: left;">Baseband</td>
+<td style="text-align: left;">Transmission at the signal’s original
+frequencies</td>
+</tr>
+<tr>
+<td style="text-align: left;">Broadband</td>
+<td style="text-align: left;">Transmission after shifting the signal
+onto a carrier</td>
+</tr>
+<tr>
+<td style="text-align: left;">Regenerative repeater</td>
+<td style="text-align: left;">A device that decides the bit value and
+retransmits a clean pulse</td>
+</tr>
+<tr>
+<td style="text-align: left;">Convergence</td>
+<td style="text-align: left;">Carrying voice, video and data over one
+common network</td>
+</tr>
+<tr>
+<td style="text-align: left;">De jure standard</td>
+<td style="text-align: left;">A standard formally approved by a
+recognised body</td>
+</tr>
+<tr>
+<td style="text-align: left;">De facto standard</td>
+<td style="text-align: left;">A standard established by widespread
+use</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="objective-questions-topic-1">Objective questions (Topic 1)</h1>
+<p>Attempt them all before checking the answers at the bottom.</p>
+<p><strong>Q1.</strong> In a general communication system, noise is
+normally shown as entering at the: A. Source B. Transmitter C. Channel
+D. Destination</p>
+<p><strong>Q2.</strong> A signal has a period of 4 ms. Its frequency is:
+A. 4 Hz B. 250 Hz C. 400 Hz D. 4 kHz</p>
+<p><strong>Q3.</strong> The bandwidth of a composite signal that
+contains frequencies from 500 Hz to 4500 Hz is: A. 500 Hz B. 4000 Hz C.
+4500 Hz D. 5000 Hz</p>
+<p><strong>Q4.</strong> Which of the following is measured in hertz? A.
+Throughput B. Data rate C. Bandwidth D. Bit error rate</p>
+<p><strong>Q5.</strong> Human voice carried over a normal mobile phone
+network is an example of: A. Analog data on an analog signal B. Analog
+data on a digital signal C. Digital data on an analog signal D. Digital
+data on a digital signal</p>
+<p><strong>Q6.</strong> The main advantage of a regenerative repeater
+over an amplifier is that it: A. Increases the bandwidth of the channel
+B. Removes accumulated noise by rebuilding the pulse C. Reduces the
+propagation delay D. Converts digital signals to analog</p>
+<p><strong>Q7.</strong> A walkie-talkie operates in which transmission
+mode? A. Simplex B. Half-duplex C. Full-duplex D. Multiplex</p>
+<p><strong>Q8.</strong> Which body publishes documents known as RFCs? A.
+ITU B. IEEE C. IETF D. ISO</p>
+<p><strong>Q9.</strong> Which ITU sector is responsible for allocating
+radio frequency spectrum? A. ITU-T B. ITU-R C. ITU-D D. ITU-S</p>
+<p><strong>Q10.</strong> IEEE 802.11 is the standard for: A. Ethernet B.
+Wireless LAN C. Bluetooth D. Token Ring</p>
+<p><strong>Q11.</strong> The wavelength of a 1.8 GHz GSM signal in free
+space is approximately: A. 1.67 cm B. 16.7 cm C. 1.67 m D. 16.7 m</p>
+<p><strong>Q12.</strong> The standard voice channel in the telephone
+network is allocated: A. 3.1 kHz B. 4 kHz C. 8 kHz D. 64 kHz</p>
+<p><strong>Q13.</strong> Which of the following is a de facto standard?
+A. ITU-T G.711 B. IEEE 802.3 C. TCP/IP in its early years D. ISO
+9001</p>
+<p><strong>Q14.</strong> Attenuation refers to: A. Addition of unwanted
+energy to a signal B. Loss of signal strength with distance C. Change in
+signal shape due to unequal delays D. Reflection of a signal from an
+obstacle</p>
+<p><strong>Q15.</strong> Which regulator issues telecommunications
+licences in Ghana? A. ITU B. NCA C. GIFEC D. Data Protection
+Commission</p>
+<p><strong>Q16.</strong> A power loss of 3 dB corresponds to
+approximately: A. One tenth of the power B. One half of the power C.
+Double the power D. Three times the power</p>
+<p><strong>Q17.</strong> Which of the following is NOT an advantage of
+digital transmission? A. Easier encryption B. Error detection and
+correction C. Lower bandwidth requirement for voice D. Noise immunity
+through regeneration</p>
+<p><strong>Q18.</strong> The mathematical technique that decomposes a
+composite signal into its constituent sine waves is called: A.
+Modulation B. Fourier analysis C. Quantisation D. Multiplexing</p>
+<p><strong>Q19.</strong> 3GPP is the body responsible for standardising:
+A. Wireless LANs B. Mobile cellular systems such as LTE and 5G NR C.
+Optical fibre connectors D. Internet routing protocols</p>
+<p><strong>Q20.</strong> Guided media differ from unguided media mainly
+in that guided media: A. Are always faster B. Physically confine the
+signal within a medium C. Cannot carry digital signals D. Require no
+transmitter</p>
+<hr />
+<h2 id="answers-with-explanations">Answers with explanations</h2>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 32%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Q</th>
+<th style="text-align: left;">Ans</th>
+<th style="text-align: left;">Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><strong>C</strong></td>
+<td style="text-align: left;">Noise is a property of the channel and the
+receiver front end, not of the message</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">f = 1/T = 1/0.004 = 250 Hz</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">4500 - 500 = 4000 Hz</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><strong>C</strong></td>
+<td style="text-align: left;">Bandwidth is a width of frequencies. The
+other three are in bits per second or a ratio</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">Voice is analog data. The phone digitises
+it with a codec, so it travels as a digital signal</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">It makes a hard decision on the bit and
+transmits a fresh pulse, discarding noise</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">Both parties can speak, but not at the
+same time, hence “over”</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;"><strong>C</strong></td>
+<td style="text-align: left;">IETF documents are RFCs. ITU issues
+Recommendations, IEEE issues numbered Standards</td>
+</tr>
+<tr>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">R for Radiocommunication, which manages
+spectrum and satellite orbits</td>
+</tr>
+<tr>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">802.3 is Ethernet, 802.15 is Bluetooth,
+802.11 is Wi-Fi</td>
+</tr>
+<tr>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">λ = 3x10^8 / 1.8x10^9 = 0.167 m = 16.7
+cm</td>
+</tr>
+<tr>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">Usable band is 300 to 3400 Hz (3.1 kHz),
+allocated slot is 4 kHz including guard bands</td>
+</tr>
+<tr>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;"><strong>C</strong></td>
+<td style="text-align: left;">TCP/IP spread through use before formal
+endorsement. The others were formally approved</td>
+</tr>
+<tr>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">A is noise, C is distortion, D is
+reflection</td>
+</tr>
+<tr>
+<td style="text-align: left;">15</td>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">The National Communications Authority
+regulates and licenses the sector</td>
+</tr>
+<tr>
+<td style="text-align: left;">16</td>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">10 log10(0.5) = -3.01 dB, so 3 dB down is
+half the power</td>
+</tr>
+<tr>
+<td style="text-align: left;">17</td>
+<td style="text-align: left;"><strong>C</strong></td>
+<td style="text-align: left;">Digitised voice needs MORE raw bandwidth,
+not less. That is a disadvantage</td>
+</tr>
+<tr>
+<td style="text-align: left;">18</td>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">Fourier analysis moves a signal from the
+time domain to the frequency domain</td>
+</tr>
+<tr>
+<td style="text-align: left;">19</td>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">3GPP produces the Releases that define GSM
+through 5G NR</td>
+</tr>
+<tr>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">Confinement within a physical medium is
+the defining property</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="exam-style-written-questions-with-model-answers">Exam-style
+written questions with model answers</h1>
+<p><strong>W1. With the aid of a labelled diagram, describe the
+components of a general telecommunication system. (6 marks)</strong></p>
+<p><em>Model answer:</em> Draw the five-block diagram with noise
+entering at the channel. Then: the <strong>source</strong> produces the
+message. The <strong>transmitter</strong> converts the message into a
+signal suited to the channel, typically by encoding and modulating it.
+The <strong>channel</strong> is the medium that carries the signal and
+is the point at which noise and impairments are introduced. The
+<strong>receiver</strong> performs the inverse of the transmitter,
+demodulating and decoding the signal. The <strong>destination</strong>
+consumes the recovered message. One mark per correctly labelled block,
+one for showing noise at the channel.</p>
+<p><strong>W2. Distinguish between bandwidth and data rate, giving units
+and one example of each. (4 marks)</strong></p>
+<p><em>Model answer:</em> Bandwidth is the width of the range of
+frequencies a signal occupies or a channel can pass, measured in hertz.
+A telephone voice channel has a bandwidth of about 3.1 kHz. Data rate is
+the number of bits transferred per second, measured in bits per second.
+A digitised voice channel using PCM has a data rate of 64 kbps. They are
+related, since a wider bandwidth permits a higher data rate, and Nyquist
+and Shannon quantify this relationship, but they are different
+quantities with different units.</p>
+<p><strong>W3. Explain, with reference to noise, why digital
+transmission has largely replaced analog transmission in long-distance
+networks. (6 marks)</strong></p>
+<p><em>Model answer:</em> In an analog link, signal strength is restored
+by amplifiers. An amplifier cannot distinguish signal from noise, so any
+noise picked up on the preceding section is amplified along with the
+signal. Noise therefore accumulates cumulatively along the route, and
+after many sections the signal-to-noise ratio becomes too poor for the
+message to be recovered. In a digital link, regenerative repeaters make
+a decision on whether each received pulse represents a 0 or a 1 and then
+transmit an entirely new, clean pulse. Provided the noise has not been
+severe enough to cause a wrong decision, the noise is discarded at every
+repeater rather than accumulated. The received signal at the far end is
+therefore effectively identical to the transmitted one regardless of
+distance. Digital transmission additionally permits error detection and
+correction, encryption, and simple time-division multiplexing, and it
+allows voice, video and data to be carried over a single converged
+network.</p>
+<p><strong>W4. Differentiate between de jure and de facto standards, and
+name two standards bodies relevant to telecommunications, stating the
+scope of each. (6 marks)</strong></p>
+<p><em>Model answer:</em> A de jure standard is one formally developed
+and approved by a recognised standards organisation. A de facto standard
+is one that has become widely accepted through market adoption without
+such formal approval, and it may be proprietary or open. Two bodies: the
+<strong>ITU</strong>, a United Nations agency whose ITU-T sector
+standardises wireline telecommunication protocols and codecs while ITU-R
+allocates radio spectrum and satellite orbital positions; and the
+<strong>IETF</strong>, which develops internet protocols at the network
+layer and above and publishes them as RFCs, for example IP in RFC
+791.</p>
+<p><strong>W5. Discuss how the evolution of Ghana’s telecommunications
+sector since 1994 has affected service delivery and cost. (8
+marks)</strong></p>
+<p><em>Points to build the answer on:</em> the state monopoly under
+P&amp;T gave low penetration and long waiting lists for fixed lines.
+Liberalisation from 1994 to 1995 separated Ghana Telecom and licensed
+private mobile operators, introducing competition. Mobile technology
+bypassed the cost of laying fixed copper to every home, so penetration
+rose rapidly and now exceeds 100% by SIM count. The arrival of submarine
+cables (SAT-3 in 2001, then MainOne, Glo-1 and ACE from 2010 to 2012)
+replaced expensive satellite backhaul, greatly reducing wholesale
+bandwidth cost per Mbps and enabling affordable retail data.
+Consolidation followed, with Vodafone becoming Telecel and AirtelTigo
+becoming state-owned AT, leaving three MNOs. Because MTN holds a very
+large share, the NCA has designated it as having Significant Market
+Power and applies asymmetric price regulation to protect competition.
+Most recently 5G has been introduced through a shared wholesale
+infrastructure model, and in 2026 the NCA opened competitive spectrum
+licensing in the 700 MHz, 2.3 GHz and 3 GHz bands. Conclude with the
+trade-off: competition and cable capacity lowered prices and expanded
+access, but rural coverage, quality of service and affordability of
+devices remain the constraints.</p>
+<p><strong>W6. A sinusoidal signal has a peak amplitude of 5 V and
+completes 2000 cycles in one second. Determine its frequency, period,
+and wavelength in free space. (4 marks)</strong></p>
+<p><em>Model answer:</em> - f = 2000 Hz - T = 1/f = 1/2000 = 0.5 ms - λ
+= c/f = (3 x 10^8)/2000 = 150,000 m = 150 km State the general
+expression as <code>s(t) = 5 sin(2π x 2000 t + φ)</code>.</p>
+<hr />
+<h2 id="what-to-do-before-moving-on">What to do before moving on</h2>
+<p>You should be able to, without notes: 1. Draw and label the
+five-block system diagram including noise 2. State three parameters of a
+sine wave and the relationship between period and frequency 3. Explain
+the difference between bandwidth and data rate with correct units 4.
+Give all four combinations of analog/digital data and signal with an
+example each 5. Explain the amplifier versus regenerative repeater
+argument 6. Name ITU, IEEE, IETF and NCA and say precisely what each is
+responsible for</p>
+<p>Once all six are solid, move to Topic 2, which turns the intuition
+about bandwidth into the Nyquist and Shannon equations.</p>
+</body>
+</html>
