@@ -741,14 +741,8 @@ We introduce the class of languages known as **regular languages**. Informally t
 
 ### The machine M₁ (page 36)
 
-```
-                 0                    1
-                ┌──┐                 ┌──┐
-                ▼  │                 ▼  │
-       ───▶( q1 )──┘──── 1 ────▶(( q2 ))──┘──── 0 ────▶( q3 )
-                                    ▲                     │
-                                    └──────── 0,1 ────────┘
-```
+<img width="1536" height="532" alt="image" src="https://github.com/user-attachments/assets/b97e6134-b67f-44ac-8bf1-59d733f329a8" />
+
 
 Reading the picture, in his own words:
 
