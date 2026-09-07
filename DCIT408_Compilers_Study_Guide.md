@@ -943,10 +943,10 @@ Why both:
 
 Let **A = { w ∈ {0,1}\* : w has a 1 in the 3rd position from the right }**.
 
-```
+
 <img width="293" height="179" alt="image" src="https://github.com/user-attachments/assets/93e48f88-3edb-485c-aab1-85a2b2660bef" />
 
-```
+
 <img width="313" height="324" alt="image" src="https://github.com/user-attachments/assets/2f08ced9-d89d-421c-bcc6-28cde2e9ed83" />
 
 The state diagram accepts all strings that are in A and rejects all strings that are not in A.
