@@ -82,32 +82,31 @@ These three fill-ins share one format. He gives you the machine as text and asks
 **Q7. FA: States {q0,q1}, Alphabet {a}, Start q0, Accepting {q1}, Transitions δ(q0,a)=q1, δ(q1,a)=q1.**
 **Answer: aa\*** (equivalently a⁺)
 
-```
- ──▶( q0 )── a ──▶(( q1 ))
-                     ↺ a
-```
+<img width="691" height="352" alt="image" src="https://github.com/user-attachments/assets/8b077289-af52-4cfa-99f4-375a8db8b750" />
+
 You must read one `a` to leave q0 and reach the accept state. Every further `a` loops on q1, which is still accepting. So the language is one or more a's. Note it is **not** `a*`, because `a*` includes ε, and ε leaves you at the non-accepting q0.
 
 **Q8. FA: States {s0,s1}, Alphabet {0,1}, Start s0, Accepting {s1}, Transitions δ(s0,0)=s1, δ(s0,1)=s1, δ(s1,0)=∅, δ(s1,1)=∅.**
 **Answer: 0 ∪ 1** (type as `0|1`)
 
-```
-        0
- ──▶( s0 )────▶(( s1 ))
-        1
-```
+<img width="480" height="326" alt="image" src="https://github.com/user-attachments/assets/d53cfd5b-feb2-40fc-b805-f08e9c6e1e21" />
+
 Both symbols take you from s0 to the accept state. Both transitions out of s1 are **∅**, meaning there is no transition, so the string cannot continue. Exactly one symbol is read, and it may be 0 or 1. The language is {0, 1}, that is, all strings of length exactly one.
 
 **Q9. FA: States {q0,q1,q2}, Alphabet {0}, Start q0, Accepting {q2}, Transitions δ(q0,0)=q1, δ(q1,0)=q2, δ(q2,0)=∅.**
 **Answer: 00**
 
-```
- ──▶( q0 )── 0 ──▶( q1 )── 0 ──▶(( q2 ))
-```
+<img width="545" height="292" alt="image" src="https://github.com/user-attachments/assets/6558db70-3fd7-4727-af83-e0cfbbc11328" />
+
 The alphabet has only one symbol. Two zeros carry you to the accept state, and the third would die. The language contains exactly one string, `00`.
 
 **Q10. NFA: States {q0,q1}, Alphabet {a,b}, Start q0, Accepting {q1}. δ(q0,a)={q0,q1}, δ(q0,b)=∅, δ(q1,a)=∅, δ(q1,b)={q1}.**
 **Answer: B. DFA with 3 states {q0}, {q1}, {q0,q1}, accepting {q1}, {q0,q1}.**
+
+<img width="519" height="369" alt="image" src="https://github.com/user-attachments/assets/06a6298b-9c97-460e-a651-1eebb0ae6084" />
+
+<img width="357" height="153" alt="image" src="https://github.com/user-attachments/assets/27222b52-3dc5-4429-976e-1c6b1fde3687" />
+
 
 Subset construction, always starting from the singleton set containing the start state:
 
@@ -125,6 +124,10 @@ Incidentally the language is `aa*b*`, that is, one or more a's followed by any n
 
 **Q11. Convert the following NFA into its equivalent DFA. NFA: States {q0,q1,q2}, Alphabet {0,1}, Start q0, Accepting {q2}. δ(q0,0)={q0,q1}, δ(q0,1)={q0}, δ(q1,0)={q2}, δ(q1,1)=∅, δ(q2,0)=∅, δ(q2,1)=∅.**
 **Answer to select: D. DFA with 4 states {q0}, {q0,q1}, {q0,q2}, {q0,q1,q2}, accepting states containing q2.**
+
+<img width="412" height="357" alt="image" src="https://github.com/user-attachments/assets/203bf86c-9660-4168-8ef3-6d6d1404003e" />
+
+<img width="478" height="254" alt="image" src="https://github.com/user-attachments/assets/3ad7ecdb-5e0f-4198-b532-b6d9d1ef17a5" />
 
 Do the construction honestly:
 
